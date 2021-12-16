@@ -1,0 +1,7 @@
+Em gap loi khi dung sqljdbc4 vì jdk của em là JDK 16 nên cần auth như cac hinh lỗi đính kèm. 
+
+Sau khi download msqljdbc cho JDK16 và copy file sqljdbc_auth vào thư mục system32 thì Ok
+
+JDBC latest for JDK16: 
+
+Tương tự khi dùng JSTL theo vd của thầy cũng bị lỗi với Tomcat 10 nên sau khi fix voi JSTL fro Tomcat 10 thì OK

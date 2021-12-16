@@ -1,0 +1,385 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15 Sept 2021, 20:05:44
+    Author     : nguye
+*/
+body{
+    padding:20px;
+}
+
+
+
+.cards{
+    /*tạo biến để khi thay đổi cho nhanh và responsive nhanh*/
+    --spacing: 25px;
+    --colum:3;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--spacing));/*thay vì margin-left : -30px như thế này thì sẽ dùng biến*/
+
+}
+/*Responsive*/
+@media screen and (max-width: 1024px){    
+    .cards{ 
+        --spacing: 15px;
+        --colum:1;
+    }
+}
+
+@media screen and (max-width: 767px){    
+    .cards{ 
+        --spacing: 15px;
+        --colum:1;
+    }
+}
+.card{ 
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;    
+
+    box-shadow: 0 0 25px 0 rgba(29 25 0 / 25%);
+    position: relative;
+
+    /*width: calc(25% - 30px); do mình có 4 cột , mỗi cột 25% nhưng margin chiếm 30px, và có thể dùng biến theo cách dòng bên dưới*/
+    width: calc(calc(100% / var(--colum)) - var(--spacing));
+    margin-left:  var(--spacing);
+    margin-bottom: var(--spacing);
+}
+
+
+.sale-off
+{
+    position: absolute;
+    float: left;
+    background-color: #f67052;
+    z-index: 1;
+    color: #ffffff;
+    text-align: center;
+    /*padding: 3px;*/
+    /*left: 15px;*/
+    top: 0px;
+    border-radius: 3px;
+    min-width: 42px;
+
+
+}
+.card-image{
+
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.card-top
+{
+    padding:10px;
+}
+
+.card-tittle
+{
+    font-weight: 500;
+    margin-bottom:25px;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: px;
+    word-break: break-all; /* tránh trường hợp nhập dính liền thì title dài lê thê nhưng nên giới hạn số dòng của title bằng text-truncate*/ 
+    /*text-truncate*/
+    display: -webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    word-break: break-word;
+    font-size: 16px;
+}
+
+.card-user{
+    display: flex;
+    align-items: center;
+
+}
+
+.card-user-avatar
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 100rem;
+    object-fit: cover;
+    flex-shrink: 0;    
+}
+
+.card-user-info{
+    padding-left: 5px; 
+    flex: 1;
+}
+h4
+{margin:0!important;
+}
+
+.card-user-top
+{
+    display:flex;
+    align-items: center;
+    margin-bottom: 2px;
+
+}
+
+.card-user-top ion-icon{
+    color:green;
+    margin-left: 5px;
+}
+
+
+.card-user-name
+{
+    font-weight:500;
+    font-size: 14px;
+    line-height: 1;
+    margin-left:5px;
+}
+
+.card-user-game
+{
+    /*    margin-left:5px;*/
+    color:#999;
+    font-weight: 300;
+    font-size: 13px;
+}
+
+.card-bottom
+{ padding:10px;
+  border-top: 1px solid #eed;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.card-live
+{ background-color: #ff6651;
+  display:flex;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 5px;
+  line-height: 1;
+}
+
+.card-live span{ 
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+.card-watching
+{ 
+    font-size: 13px;
+    color: #999;
+    font-weight: 300;
+}
+/*khắc phục lỗi các card không đều nhau khi nội dung không đồng đều*/
+
+.card{ 
+    display: flex;
+    flex-direction: column;
+}
+.card-content
+{ 
+    /*background-color: green;*/
+    flex: 1;
+    /*Khắc phục lệch card-bottom , sau đó cho card-bottom nằm sát bên dưới thông qua margin-top: auto*/
+    display:flex;
+    flex-direction: column;
+}
+
+.card-bottom
+{margin-top: auto;
+ flex-shrink: 0;/*cố định kích thước của nó*/
+}
+
+/*Tiếp tục khắc phục lệch card user, thì card user và card title nằm trong card-top*/
+.card-top
+{ 
+    display: flex;
+    flex-direction: column;
+    flex: 1;/*chiếm hết khoảng còn lại vì khi card bottom sử dụng margin-top auto thì để lại khoảng trống ở trên*/
+}
+.card-user
+{ 
+    margin-top: auto;   
+}
+.regishome
+{
+    padding-top:-20px;
+    text-decoration: underline;
+    margin-top: -30px;
+    margin-bottom: 10px;
+}
+.loghome
+{
+    padding-top:-20px;
+    text-decoration: underline;
+    margin-top: -50px;
+    margin-bottom: 30px;
+}
+
+.cart-icon, .cart-icon:hover{
+    zoom:2.5;   
+    color:green;
+    /*flex:1;*/
+    position: absolute;
+    right: 15px;
+    /*margin-top:-2px*/
+}
+.carttable{ 
+    margin: 20px 0 100px 0;
+}
+.btns-cartBinh{ 
+    display: flex;
+
+    justify-content: space-between;
+}
+.alignBinh
+{ 
+    text-align: center;
+    display:flex;
+
+    justify-content: center;
+
+}
+
+/*lecturedetail butto add to cart*/
+.btnBinh{
+    background-color: #007BB6!important;
+    color: white!important;
+}
+
+/*cart quantity*/
+.cartquantity {
+    color: red;
+    background: rgb(253, 216, 53);
+    height: 10px;
+    left: 10px;
+    top: -3px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 10px;
+    font-size: 5px;
+    font-weight: 500;
+    position: absolute;
+    padding: 0px 4px;
+}
+/*cart table*/
+.tdcenter{
+    text-align: center;
+    vertical-align: middle!important;
+}
+
+.pricerightBinh{
+    text-align: right!important;
+}
+.namerightBinh{
+    text-align: left!important;
+}
+
+.card-lesson { 
+    width: 80px;
+    height: 60px;
+    /*border-radius: 100rem;*/
+    object-fit: cover;
+    flex-shrink: 0;    
+}
+
+
+
+.blinkingBinh{
+    animation:blinkingText 2.5s infinite;
+    margin-bottom: 2px;
+}
+@keyframes blinkingText{
+    0%{     color: red;    }
+    49%{    color: red; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: red;    }
+}
+
+.toprightBinh { 
+    /*    margin-top: -5px;
+        padding-bottom: 2px!important;*/
+    line-height: 5px;
+
+}
+.Search{
+    display:flex;
+/*    position: relative;
+    ;*/
+
+}
+.Search-sub1 {
+    display: flex;
+    width: 300px;
+    transform: translate(250px,0)
+}
+.form-controlBinh {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+/*    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;*/
+    border-radius: 0.25rem;
+    /*transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;*/
+}
+
+
+
+.Search-sub2 {    
+    color: #fff;
+    background-color:#0056b3;
+    border-color: #0d6efd;    
+    border-radius: 0.25rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+
+
+    border: 1px solid transparent;
+    /*padding: 0.375rem 0.75rem;*/
+    font-size: 1rem;
+    /*border-radius: 0.5rem;*/
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    
+}
+
+.Search-sub2:hover{ 
+    background-color:#0d6efd;
+    box-shadow: 0 1px #999;
+  
+
+}
+.searchInput
+{ 
+    display: flex;
+}
+
+.Search-sub2:active{
+    background-color: #0056b3;
+    box-shadow: 0 1px #666;
+    transform: translateY(1px);
+}

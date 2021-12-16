@@ -3,12 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/TuyenTyrusNg/OneDrive%20-%205TB/Workspace/GitClone/JavaSem4/LaptopShop/web/menu.jsp</file>
-            <file>file:/C:/Users/TuyenTyrusNg/OneDrive%20-%205TB/Workspace/GitClone/JavaSem4/LaptopShop/src/java/com/tuyenng/dao/UtilDB.java</file>
-            <file>file:/C:/Users/TuyenTyrusNg/OneDrive%20-%205TB/Workspace/GitClone/JavaSem4/LaptopShop/src/java/com/tuyenng/controller/ListProductServlet.java</file>
-            <file>file:/C:/Users/TuyenTyrusNg/OneDrive%20-%205TB/Workspace/GitClone/JavaSem4/LaptopShop/web/index.jsp</file>
-            <file>file:/C:/Users/TuyenTyrusNg/OneDrive%20-%205TB/Workspace/GitClone/JavaSem4/LaptopShop/src/java/com/tuyenng/controller/MenuPageServlet.java</file>
-            <file>file:/C:/Users/TuyenTyrusNg/OneDrive%20-%205TB/Workspace/GitClone/JavaSem4/LaptopShop/src/java/com/tuyenng/controller/ProductDetail.java</file>
+            <file>file:/C:/Users/TuyenTyrusNg/OneDrive%20-%205TB/Workspace/GitClone/JavaSem4/SEM4_PROJECT_WEBLAPTOP/web/index.jsp</file>
+            <file>file:/C:/Users/TuyenTyrusNg/OneDrive%20-%205TB/Workspace/GitClone/JavaSem4/SEM4_PROJECT_WEBLAPTOP/src/java/com/btcomputer/DAO/UtilDB.java</file>
+            <file>file:/C:/Users/TuyenTyrusNg/OneDrive%20-%205TB/Workspace/GitClone/JavaSem4/SEM4_PROJECT_WEBLAPTOP/src/java/com/btcomputer/controller/MenuServlet.java</file>
+            <file>file:/C:/Users/TuyenTyrusNg/OneDrive%20-%205TB/Workspace/GitClone/JavaSem4/SEM4_PROJECT_WEBLAPTOP/src/java/com/btcomputer/controller/AdminCategory.java</file>
+            <file>file:/C:/Users/TuyenTyrusNg/OneDrive%20-%205TB/Workspace/GitClone/JavaSem4/SEM4_PROJECT_WEBLAPTOP/web/head.jsp</file>
+            <file>file:/C:/Users/TuyenTyrusNg/OneDrive%20-%205TB/Workspace/GitClone/JavaSem4/SEM4_PROJECT_WEBLAPTOP/src/java/com/btcomputer/controller/AddCartServlet.java</file>
         </group>
     </open-files>
 </project-private>
