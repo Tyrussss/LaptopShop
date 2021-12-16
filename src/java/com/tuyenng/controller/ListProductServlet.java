@@ -5,13 +5,10 @@
  */
 package com.tuyenng.controller;
 
-import com.tuyenng.dao.ProductsDAO;
-import com.tuyenng.model.Products;
-import javax.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,7 +17,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author TuyenTyrusNg
  */
-public class ProductDetail extends HttpServlet {
+@WebServlet(name = "ListProductServlet", urlPatterns = {"/ListProductServlet"})
+public class ListProductServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,12 +32,11 @@ public class ProductDetail extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        ProductsDAO productDAO = new ProductsDAO();
-        String productID = (request.getParameter("productID"));
-        ArrayList<Products> items = productDAO.getByID(productID);
-        request.setAttribute("models", items);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("menu.jsp");
-        dispatcher.include(request, response);
+        try ( PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            
+            out.println("listing Product");
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

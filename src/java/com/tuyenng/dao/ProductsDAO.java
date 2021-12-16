@@ -79,4 +79,25 @@ public class ProductsDAO {
         }
         return list;
     }
+    public ArrayList<Products> getByID (String productID) {
+        ArrayList<Products> list = new ArrayList<Products>();
+        try {
+            String query = "select * from products where productstype =" + productID;
+            Statement stm = utilDB.getConn().createStatement();
+            ResultSet rs = stm.executeQuery(query);
+            while(rs.next()){
+                Products item = new Products();
+                item.setProductID(rs.getString("productID"));
+                item.setName(rs.getString("name"));
+                item.setProductstype(rs.getString("productstype"));
+                ProductTypesDAO proDAO = new ProductTypesDAO();
+                item.getProductstypes(proDAO.getByType(item.getProductstype()));
+                list.add(item);
+            }
+        }
+        catch (SQLException ex) {
+            Logger.getLogger(ProductsDAO.class.getName()).log(Level.SEVERE, null, ex);     
+        }
+        return list;
+    }
 }

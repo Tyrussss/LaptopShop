@@ -30,7 +30,7 @@ public class UtilDB {
 
     public void connect (){
         if(conn == null){
-            String dbURL = "jdbc:sqlserver://localhost:1433;databaseName=laptopmoddb;user=sa;password=123456";
+            String dbURL = "jdbc:sqlserver://localhost;databaseName=laptopmoddb;user=sa;password=123456";
             
             try {
                 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
